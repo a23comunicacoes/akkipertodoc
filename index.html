@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação - AkkiPerto</title>
+
+    <link rel="shortcut icon" href="img/favicon.png" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilo css -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!--Font Awasome -->
+    <script src="https://kit.fontawesome.com/eda083891d.js" crossorigin="anonymous"></script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <!-- sidebar -->
+        <div class="sidebar">
+            <img src="img/logo.png" class="logo" alt="Logo da documentação">
+            <div class="navegacao">
+                <ul>
+                    <li class="menu-item"><a href="#sobre" onclick="esconderMenu()">Sobre</a></li>
+                    <li class="menu-item"><a href="#db-page" onclick="esconderMenu()">Banco de Dados</a></li>
+                    <li class="menu-item"><a href="#back-end" onclick="esconderMenu()">Back-End</a></li>
+                    <li class="menu-item"><a href="#estrutura-page" onclick="esconderMenu()">Estrutura</a></li>
+                    <li class="menu-item"><a href="#app-caminho" onclick="esconderMenu()">Apps Django</a></li>
+                    <li class="menu-item"><a href="#migra-auth" onclick="esconderMenu()">Authentication</a></li>
+                    <li class="menu-item"><a href="#migra-comercial" onclick="esconderMenu()">Commercial</a></li>
+                    <li class="menu-item"><a href="#migra-common" onclick="esconderMenu()">Common</a></li>
+                    <li class="menu-item"><a href="#static-page" onclick="esconderMenu()">Static</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- sidebar -->
+
+        <div class="conteudo-site">
+
+            <a href="#" class="menu" onclick="menu()" id="menu"><img src="img/menu.svg" alt="Botão menu do site"></a>
+            <h1>Documentação - AkkiPerto - Aplicativo</h1>
+            <hr class="linha-divisoria">
+
+            <!-- Seção sobre -->
+            <section id="sobre">
+                <h2>SOBRE</h2>
+                <hr class="linha-divisoria">
+                <!--Descrição do aplicativo -->
+                <p> O AkkiPerto é um aplicativo mobile que tem o objetivo de conectar usuários e estabelecimentos,
+                    centralizando informações e serviços em um único lugar. O aplicativo é dividido em duas partes, a
+                    primeira é a parte do usuário, onde ele pode encontrar estabelecimentos, visualizar informações,
+                    fazer compras e a gendar serviços. A segunda parte é a parte do estabelecimento, onde o usuário
+                    pode cadastrar seu estabelecimento, cadastrar produtos e serviço.
+                </p>
+                <p>
+                    O aplicativo é desenvolvido na linguagem de programação Dart, utilizando o framework Flutter em seu
+                    front-end e no back-end é utilizado Python com o framework Django.
+                </p>
+                <p>
+                    O aplicativo possuí um painel de controle desenvolvido em flutter web para gerenciar os
+                    estabelecimentos, produtos e serviços cadastrados no aplicativo. Além de possuir um painel feito
+                    também em Django.
+                </p>
+                <p>
+                    O aplicativo possuí um banco de dados em PostgreSQL e utiliza as formas de pagamento da API do
+                    Asaas.
+                </p>
+            </section>
+
+            <!--Seção Banco de Dados-->
+            <section class="section-style" id="db-page">
+                <h3 class="title-secao">BANCO DE DADOS</h3>
+                <hr class="linha-divisoria" style="width: 120px;">
+                <p>
+                    O banco de dados do aplicativo é desenvolvido em PostgreSQL e a conexão é feita via postgres://.
+                </p>
+            </section>
+
+            <section class="section-style" id="back-end">
+                <h2 class="title-secao">Back-End</h2>
+                <hr class="linha-divisoria" style="width: 120px;">
+                <!--Seção API's-->
+                <section class="section-style" id="estrutura-page">
+                    <h3 class="title-secao">Estrutura Principal</h3>
+                    <hr class="linha-divisoria" style="width: 40px;">
+
+                    <br><br>
+
+                    <div class="linha-estruturas">
+                        <br>
+                        <img src="img/estrutura-files-api-back.png" alt="Estrutura de pastas do back-end"
+                            class="img-estrutura">
+
+                        <p>
+                            <strong>.devcontainer:</strong> Diretório para configurações do contêiner de
+                            desenvolvimento.<br>
+                            <strong>.gitignore:</strong> Arquivo para especificar quais arquivos devem ser ignorados
+                            pelo Git.<br>
+                            <strong>.vscode:</strong> Diretório para configurações específicas do Visual Studio
+                            Code.<br>
+                            <strong>Dockerfile.dev:</strong> Arquivo Docker para configuração do ambiente de
+                            desenvolvimento.<br>
+                            <strong>Dockerfile.prod:</strong> Arquivo Docker para configuração do ambiente de
+                            produção.<br>
+                            <strong>README.md:</strong> Arquivo Markdown usado para descrever o projeto.<br>
+                            <strong>akkiperto:</strong> Diretório principal do código fonte do projeto.<br>
+                            <strong>akkiperto-key.pem e akkiperto.pem:</strong> Chaves para configurações de
+                            segurança.<br>
+                            <strong>docker-compose.dev.yml e docker-compose.yml:</strong> Arquivos para definição e
+                            execução de serviços Docker.<br>
+                            <strong>manage.py:</strong> Script de utilitário para gerenciamento de tarefas no
+                            Django.<br>
+                            <strong>poetry.lock e pyproject.toml:</strong> Arquivos de configuração para gerenciamento
+                            de dependências com Poetry.<br>
+                            <strong>start.sh:</strong> Script de inicialização.<br>
+                            <strong>static:</strong> Diretório para arquivos estáticos.<br>
+                        </p>
+                    </div>
+
+                    <br><br>
+                    <h3 class="title-secao" id="akki-dir">/akkiperto</h3>
+                    <hr class="linha-divisoria" style="width: 110px;">
+                    <br>
+                    <div class="linha-estruturas">
+                        <p>
+                            <strong>__init__.py:</strong> Arquivo que indica que o diretório é um pacote Python.<br>
+                            <strong>apps:</strong> Diretório contendo as aplicações Django individuais. Cada app é um
+                            módulo
+                            com seu próprio conjunto de modelos, visualizações, templates e URLs.<br>
+                            <strong>asgi.py:</strong> Arquivo de configuração para ASGI (Asynchronous Server Gateway
+                            Interface), utilizado para o deploy da aplicação em servidores assíncronos.<br>
+                            <strong>context_processors.py:</strong> Arquivo que contém processadores de contexto
+                            customizados.<br>
+                            <strong>middleware.py:</strong> Arquivo para definir middlewares customizados do Django.<br>
+                            <strong>settings.py:</strong> Arquivo de configurações central do projeto Django. Inclui
+                            configurações de banco de dados, internacionalização, middleware, aplicativos instalados,
+                            entre outros.<br>
+                            <strong>urls.py:</strong> Arquivo que define as URLs do projeto para o roteamento das
+                            requisições da API.<br>
+                            <strong>wsgi.py:</strong> Arquivo de configuração para WSGI (Web Server Gateway Interface),
+                            necessário para o deploy da aplicação em servidores web que suportam o padrão WSGI.<br>
+                        </p>
+
+                        <img src="img/akkiperto-estr.png" alt="Estrutura de pastas do back-end" class="img-estrutura">
+                    </div>
+
+                    <br><br>
+                    <h3 class="title-secao" id="app-caminho">/akkiperto/apps</h3>
+                    <hr class="linha-divisoria" style="width: 110px;">
+                    <br>
+                    <div class="linha-estruturas">
+
+                        <img src="img/apps-api-estrutura.png" alt="Estrutura de pastas do back-end"
+                            class="img-estrutura" style="margin-top: 20px;">
+
+                        <p>
+                            <strong>authentication:</strong> Contém a lógica, integrações e os modelos relacionados à
+                            autenticação de usuários.
+                            <br>
+                            <strong>commercial:</strong> Contém as funcionalidades relacionadas à parte comercial do
+                            projeto,
+                            contendo lógica de produtos, serviços, eventos, usuários, equipe, entre outros.
+                            <br>
+                            <strong>common:</strong> Diretório comum do projeto, contendo a lógica e modelos que são
+                            compartilhados entre as aplicações.
+                            <br>
+                            <strong>external:</strong> Contém a lógica para integrações com outras API's atualmente
+                            conta com:
+                            Twilio e Yapay.
+                            <br>
+                            <strong>promotional:</strong> Contém a lógica promocional do app, atualmente somente o model
+                            de Banner está configurado.
+                        </p>
+
+                    </div>
+
+                    <br><br>
+                    <h3 class="title-secao" id="apps-pastas">/akkiperto/apps/**</h3>
+                    <hr class="linha-divisoria" style="width: 110px;">
+                    <br>
+                    <p>
+                        Cada pasta dentro do app significa uma aplicação Django individual. Cada app é um módulo com
+                        seu próprio conjunto de modelos, visualizações, templates, URL e Migrações. A estrutura de
+                        cada pasta APP
+                        é a seguinte:
+                        <br><br>
+                    </p>
+                    <div class="linha-estruturas">
+                        <p>
+                            <strong>__init__.py:</strong> Indica que o diretório é um pacote Python.
+                            <br>
+                            <strong>admin.py:</strong> Este arquivo é usado para registrar modelos com o admin do
+                            Django. Isso permite que os modelos sejam gerenciados através da interface de administração
+                            do Django.
+                            <br>
+                            <strong>apps.py:</strong> Contém a configuração da aplicação .
+                            <br>
+                            <strong>migrations:</strong> Diretório que contém migrações de banco de dados para a
+                            aplicação. As migrações são scripts gerados pelo Django para modificar a estrutura do
+                            banco de dados (como adicionar uma tabela, alterar um campo, etc.) baseados nas alterações
+                            feitas nos modelos.
+                            <br>
+                            <strong>models.py:</strong> Define os modelos do Django para a aplicação. Estes modelos são
+                            usados para interagir com o banco de dados e representam as tabelas do banco de dados.
+                            <br>
+                            <strong>serializers.py:</strong> Contém serializadores para converter modelos em JSON e
+                            vice-versa.
+                            <br>
+                            <strong>tests.py:</strong> Contém testes de integrações e funcionalidades para a aplicação.
+                            <br>
+                            <strong>urls.py:</strong> Define as URLs (rotas) para a aplicação que serão utilizadas na
+                            API.
+                            <br>
+                            <strong>utils.py:</strong> Contém funções utilitárias que apoiam as operações de
+                            cada app, na autenticação por exemplo. Contém funções para gerar tokens de autenticação e
+                            enviar SMS.
+                            <br>
+                            <strong>views.py:</strong> Contém as visualizações da aplicação. As visualizações em Django
+                            são responsáveis ​​por processar as solicitações e devolver as respostas.
+                        </p>
+
+                        <img src="img/apps-auth-estrutura.png" alt="Estrutura de pastas do back-end"
+                            class="img-estrutura" style="margin-top: 20px;">
+                    </div>
+
+                    <br><br>
+                    <h3 class="title-secao" id="migra-auth">Migrações (Migrations) - Authentication</h3>
+                    <hr class="linha-divisoria" style="width: 110px;">
+                    <br>
+                    <div class="linha-estruturas">
+                        <p>
+                            <strong>0001_initial.py:</strong> Esta é a primeira migração gerada pelo Django para a
+                            aplicação
+                            authentication. Ela define a estrutura inicial do banco de dados para os modelos
+                            relacionados à autenticação, como a criação de tabelas, campos e índices iniciais.
+                            <br>
+                            <strong>0002_remove_user_name_user_otp.py:</strong> Esta migração é responsável por remover
+                            o campo
+                            name do modelo User.
+                            <br>
+                            <strong>0003_alter_user_last_name.py:</strong> Altera o campo last_name do modelo User.
+                            <br>
+                            <strong>0004_alter_user_id.py:</strong> Modifica o campo id do modelo User.
+                            <br>
+                            <strong>0005_user_profile_picture.py:</strong> Adiciona um campo profile_picture ao modelo
+                            User.
+                            de perfil associadas.
+                            <br>
+                            <strong>0006_user_type.py:</strong> Adiciona um campo type ao modelo User.
+                            etc.
+                            <br>
+                            <strong>0007_userprofile.py:</strong> Cria um novo modelo UserProfile.
+                            <br>
+                            <strong>0008_alter_userprofile_user.py:</strong> Altera a relação entre UserProfile e User.
+                            <br>
+                            <strong>0009_delete_userprofile.py:</strong> Exclui o modelo UserProfile.
+                        </p>
+                    </div>
+
+                    <br><br>
+                    <h3 class="title-secao" id="migra-comercial">Migrações (Migrations) - Commercial</h3>
+                    <hr class="linha-divisoria" style="width: 110px;">
+                    <br>
+                    <div class="linha-estruturas">
+                        <p>
+                            <br><strong>0001_initial.py:</strong> A primeira migração gerada para a aplicação
+                            commercial, definindo a
+                            estrutura inicial do banco de dados para os modelos relacionados a esta aplicação.
+
+                            <br><strong>0002_store_logo.py:</strong> Adiciona um campo logo ao modelo Store. Incluindo
+                            uma
+                            nova característica visual para as lojas.
+
+                            <br><strong>0003_alter_store_address_alter_store_id_alter_store_logo.py:</strong> Modifica
+                            vários campos do
+                            modelo Store, como address, id, e logo.
+
+                            <br><strong>0004_product_productvariant_productvariantimage.py:</strong> Introduz novos
+                            modelos como Product,
+                            ProductVariant, e ProductVariantImage. Isso expande a estrutura do banco de dados para
+                            acomodar diferentes variantes de produtos e suas imagens.
+
+                            <br><strong>0005_productimage_remove_productvariantimage_requested_by_and_more.py:</strong>
+                            Adiciona o modelo
+                            ProductImage e remove ProductVariantImage, além de outras alterações.
+
+                            <br><strong>0006_alter_product_store.py:</strong> Modifica a relação do modelo Product com
+                            Store.
+
+                            <br><strong>0007_alter_productimage_image_serviceprovider.py:</strong> Introduz o modelo
+                            ServiceProvider e faz
+                            alterações no modelo ProductImage.
+
+                            <br><strong>0008_alter_serviceprovider_options_serviceprovider_phone.py:</strong> Altera
+                            opções no modelo
+                            ServiceProvider e adiciona/modifica o campo phone.
+
+                            <br><strong>0009_serviceprovider_whatsapp_enabled.py:</strong> Adiciona um campo indicando
+                            se o WhatsApp está
+                            habilitado para o ServiceProvider. Mostra a integração com funcionalidades de comunicação.
+
+                            <br><strong>0010_alter_productimage_product.py:</strong> Altera a relação do modelo
+                            ProductImage com Product,
+                            possivelmente modificando a maneira como as imagens estão vinculadas aos produtos.
+
+                            <br><strong>0011_alter_productimage_image_alter_productimage_product.py:</strong> Faz mais
+                            alterações nos campos
+                            image e product do modelo ProductImage.
+
+                            <br><strong>0012_productcategory_order.py:</strong> Introduz o campo order no modelo
+                            ProductCategory.
+
+                            <br><strong>0013_product_category.py:</strong> Adiciona um campo category ao modelo Product,
+                            associando produtos
+                            a categorias específicas.
+
+                            <br><strong>0014_serviceprovider_user_store_owner.py:</strong> Vincula ServiceProvider a um
+                            usuário e a um
+                            proprietário de loja (StoreOwner). Isso define relações importantes para a gestão de
+                            prestadores de serviços.
+
+                            <br><strong>0015_alter_serviceprovider_user_alter_store_owner.py:</strong> Faz alterações
+                            nos campos relacionados
+                            a user e owner nos modelos ServiceProvider e Store.
+
+                            <br><strong>0016_cart_cartitem.py:</strong> Introduz os modelos Cart e CartItem, para
+                            gerenciar um
+                            carrinho de compras e seus itens.
+
+                            <br><strong>0017_serviceprovider_title.py:</strong> Adiciona um campo title ao modelo
+                            ServiceProvider,
+                            possivelmente para um título ou descrição do serviço oferecido.
+
+                            <br><strong>0018_event_creditcards.py e 0018_orderitem_creditcards.py:</strong> Introduzem o
+                            uso de cartões de
+                            crédito nos modelos Event e OrderItem, respectivamente.
+
+                            <br><strong>0019_merge_20231104_1313.py:</strong> Um arquivo de migração de mesclagem, usado
+                            para unificar
+                            múltiplas linhas de migrações.
+
+                            <br><strong>0020_news.py:</strong> Adiciona um modelo News, para gerenciar notícias ou
+                            atualizações
+                            relacionadas à aplicação.
+
+                            <br><strong>0021_remove_serviceprovider_image_serviceproviderimage.py:</strong> Remove o
+                            campo image do modelo
+                            ServiceProvider e introduz um novo modelo ServiceProviderImage.
+
+                            <br><strong>0022_serviceproviderrating.py:</strong> Introduz um modelo
+                            ServiceProviderRating, indicando a
+                            implementação de um sistema de avaliação para os prestadores de serviços.
+
+                            <br><strong>0023_alter_serviceproviderrating_user_storerating.py:</strong> Altera o modelo
+                            ServiceProviderRating
+                            e introduz StoreRating, expandindo o sistema de avaliações para incluir avaliações de lojas.
+
+                        </p>
+                    </div>
+
+                    <br><br>
+                    <h3 class="title-secao" id="migra-common">Migrações (Migrations) - Common</h3>
+                    <hr class="linha-divisoria" style="width: 110px;">
+                    <br>
+                    <div class="linha-estruturas">
+                        <p>
+                            <strong>0001_initial.py:</strong> Esta é a primeira migração gerada para a aplicação common. Ela define a
+                            estrutura inicial do banco de dados para os modelos relacionados a esta aplicação. Isso
+                            geralmente inclui a criação de tabelas, campos e índices iniciais.
+                            <br>
+                            <strong>0002_alter_address_id.py:</strong> Esta migração indica uma alteração no campo id do modelo Address.
+                            Tal alteração pode envolver a mudança no tipo de campo, por exemplo, de um inteiro para um
+                            UUID, ou ajustes em suas propriedades, como índices ou restrições.
+                            <br>
+                        </p>
+                    </div>
+
+                    <br><br>
+                    <h3 class="title-secao" id="migra-common">Migrações (Migrations) - Common</h3>
+                    <hr class="linha-divisoria" style="width: 110px;">
+                    <br>
+                    <div class="linha-estruturas">
+                        <p>
+                            <strong>0001_initial.py:</strong> Esta é a primeira migração gerada para a aplicação common. Ela define a
+                            estrutura inicial do banco de dados para os modelos relacionados a esta aplicação. Isso
+                            geralmente inclui a criação de tabelas, campos e índices iniciais.
+                            <br>
+                            <strong>0002_alter_address_id.py:</strong> Esta migração indica uma alteração no campo id do modelo Address.
+                            Tal alteração pode envolver a mudança no tipo de campo, por exemplo, de um inteiro para um
+                            UUID, ou ajustes em suas propriedades, como índices ou restrições.
+                            <br>
+                        </p>
+                    </div>
+                </section>
+
+                <section class="section-style" id="static-page">
+                    <h3 class="title-secao">Static</h3>
+                    <hr class="linha-divisoria" style="width: 40px;">
+                    <br>
+                    <p>
+                        O diretório static contém arquivos estáticos, como imagens, CSS e JavaScript. 
+                    </p>
+                    <img src="img/static-page.png" alt="Estrutura de pastas do back-end" class="img-estrutura">
+                </section>
+            </section>
+
+            <!-- Seta -->
+            <a href="#menu" class="seta-up">
+                <img src="img/seta.png" alt="Subir para o topo">
+            </a>
+            <!-- Seta -->
+
+            <section class="footer" id="footer">
+                <p style="text-align: center;
+                opacity: .7;
+                font-size: 14px;
+                background-color: #ebebeb;
+                padding: 15px;
+                margin-top: 50px;">Criado e desenvolvido por A23 Comunicações e Seven Maker</p>
+            </section>
+        </div>
+
+    </div>
+
+    <script>
+
+        function menu() {
+            var conteudoSite = document.querySelector('.conteudo-site')
+            var sidebar = document.querySelector('.sidebar')
+
+            sidebar.classList.toggle('active')
+            conteudoSite.classList.toggle('active')
+        }
+
+        function esconderMenu() {
+            var tamanhoTela = window.innerWidth;
+
+            if (tamanhoTela < "600") {
+                var sidebar = document.querySelector('.sidebar')
+                var conteudoSite = document.querySelector('.conteudo-site')
+
+                sidebar.classList.remove('active')
+                conteudoSite.classList.remove('active')
+            }
+        }
+
+        jQuery.noConflict();
+
+        $ = jQuery;
+
+        jQuery(document).ready(function ($) {
+            $('.menu-item').click(function () {
+                jQuery(this).find('.sub-menu').slideToggle();
+            });
+
+            $('.btn-accordion').click(function () {
+                var accordion_next = $(this).next('.content-accordion');
+                var accordion_icon = $(this).find('i');
+
+                //Toggle accordion item e trocar i do botão
+                accordion_next.slideToggle(function () {
+                    if (accordion_next.is(':visible')) {
+                        accordion_icon.removeClass('fa-angle-down').addClass('fa-angle-up');
+                        accordion_next.css('height', '300px');
+                    } else {
+                        accordion_icon.removeClass('fa-angle-up').addClass('fa-angle-down');
+                        accordion_next.css('height', '0px');
+                    }
+                });
+
+            });
+
+            $('.btn-accordion-data').click(function () {
+                var accordion_next = $(this).next('.data-fields');
+                var accordion_icon = $(this).find('i');
+
+                //Toggle accordion item e trocar i do botão
+                accordion_next.slideToggle(function () {
+                    if (accordion_next.is(':visible')) {
+                        accordion_icon.removeClass('fa-angle-down').addClass('fa-angle-up');
+                        accordion_next.css('height', '300px');
+                    } else {
+                        accordion_icon.removeClass('fa-angle-up').addClass('fa-angle-down');
+                        accordion_next.css('height', '0px');
+                    }
+                });
+            });
+
+            $('.btn-accordion-workflow').click(function () {
+                var accordion_next = $(this).next('.workflow-content');
+                var accordion_icon = $(this).find('i');
+
+                //Toggle accordion item e trocar i do botão
+                accordion_next.slideToggle(function () {
+                    if (accordion_next.is(':visible')) {
+                        accordion_icon.removeClass('fa-angle-down').addClass('fa-angle-up');
+                        accordion_next.css('height', '300px');
+                    } else {
+                        accordion_icon.removeClass('fa-angle-up').addClass('fa-angle-down');
+                        accordion_next.css('height', '0px');
+                    }
+                });
+            });
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>
